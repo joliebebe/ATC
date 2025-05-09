@@ -4,20 +4,21 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateModelVoituresTable extends Migration
+class CreateModelCarsTable extends Migration
 {
+
     public function up()
     {
-        Schema::create('model_voitures', function (Blueprint $table) {
+        Schema::create('get_model_cars', function (Blueprint $table) {
             $table->id();
             $table->string('nom');
-            $table->foreignId('marque_id')->constrained('marques')->onDelete('cascade');
+            $table->foreignId('marque_id')->constrained('get_brands')->onDelete('cascade');
             $table->timestamps();
         });
     }
 
     public function down()
     {
-        Schema::dropIfExists('model_voitures');
+        Schema::dropIfExists('get_model_cars');
     }
 }

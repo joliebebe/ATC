@@ -4,11 +4,11 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMarquesTable extends Migration
+class CreateGetBrandsTable extends Migration
 {
     public function up()
     {
-        Schema::create('marques', function (Blueprint $table) {
+        Schema::create('get_brands', function (Blueprint $table) {
             $table->id();
             $table->string('nom');
             $table->string('logo')->nullable();
@@ -18,7 +18,7 @@ class CreateMarquesTable extends Migration
     }
     public function down()
     {
-        Schema::dropIfExists('marques');
+        Schema::dropIfExists('get_brands');
     }
 }
 

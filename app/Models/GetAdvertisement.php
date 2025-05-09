@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Publicite extends Model
+class GetAdvertisement extends Model
 {
     protected $fillable = [
         'titre',
@@ -26,12 +26,12 @@ class Publicite extends Model
 
     public function marque()
     {
-        return $this->belongsTo(Marque::class);
+        return $this->belongsTo(getBrand::class);
     }
 
-    public function models()
+    public function model()
     {
-        return $this->belongsToMany(ModelVoiture::class, 'publicite_model_voiture');
+        return $this->belongsTo(getModelCar::class);
     }
     public function getPrixFormatAttribute()
     {

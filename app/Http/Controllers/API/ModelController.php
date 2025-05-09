@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Models\ModelVoiture;
+use App\Models\getModelCar;
 use Illuminate\Http\JsonResponse;
 
 class ModelController extends Controller
@@ -13,7 +13,7 @@ class ModelController extends Controller
      */
     public function index(): JsonResponse
     {
-        $models = ModelVoiture::all();
+        $models = getModelCar::all();
 
         return response()->json([
             'resultat' => $models,
